@@ -2,13 +2,13 @@ FROM python:3.9-slim
 
 WORKDIR /app
 
-COPY auth-service/requirements.txt .
+COPY auth_service/requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY auth-service/ .
+COPY auth_service/ .
 
-COPY common/ ./common
+COPY commom/ ./common
 
 EXPOSE 5000
 

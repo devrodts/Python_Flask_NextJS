@@ -1,11 +1,11 @@
 WORKDIR /app
 
-COPY user-service/requirements.txt .
+COPY user_service/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 
-COPY user-service/ .
-COPY common/ ./common
+COPY user_service/ .
+COPY commom/ ./common
 
 EXPOSE 5001
 
