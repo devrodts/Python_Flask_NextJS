@@ -1,14 +1,14 @@
-FROM python:3.9-slim
+FROM python:latest
 
 WORKDIR /app
 
-COPY auth_service/requirements.txt .
+COPY flask-backend/auth_service/requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY auth_service/ .
+COPY flask-backend/auth_service/ .
 
-COPY commom/ ./common
+COPY flask-backend/common/ ./common
 
 EXPOSE 5000
 

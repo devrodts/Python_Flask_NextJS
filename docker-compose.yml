@@ -11,7 +11,7 @@ services:
       - "27017:27017"
     networks:
       - python-next-network
-  auth-service:
+  auth_service:
     build:
       context: .
       dockerfile: flask-backend/auth_service/Dockerfile
@@ -22,7 +22,7 @@ services:
       - mongo
     networks:
       - python-next-network
-  user-service:
+  user_service:
     build:
       context: .
       dockerfile: flask-backend/user_service/Dockerfile
@@ -40,8 +40,8 @@ services:
     ports:
       - "3000:3000"
     depends_on:
-      - auth-service
-      - user-service
+      - auth_service
+      - user_service
     networks:
       - python-next-network
 networks:
