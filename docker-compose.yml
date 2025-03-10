@@ -14,7 +14,7 @@ services:
   auth-service:
     build:
       context: .
-      dockerfile: flask-backend/auth-service/Dockerfile
+      dockerfile: flask-backend/auth_service/Dockerfile
     ports:
       - "5000:5000"
     depends_on:
@@ -25,7 +25,7 @@ services:
   user-service:
     build:
       context: .
-      dockerfile: flask-backend/user-service/Dockerfile
+      dockerfile: flask-backend/user_service/Dockerfile
     ports:
       - "5001:5001"
     depends_on:
